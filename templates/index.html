@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AES-256 Encryption</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 30px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 850px;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 18px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .header {
+            text-align: center;
+
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #1e3a8a;
+
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #64748b;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+
+            font-weight: bold;
+
+            margin-bottom: 8px;
+
+            color: #334155;
+        }
+
+        textarea,
+        input {
+            width: 100%;
+
+            padding: 14px;
+
+            border: 1px solid #cbd5e1;
+
+            border-radius: 10px;
+
+            font-size: 15px;
+        }
+
+        textarea {
+            min-height: 130px;
+
+            resize: vertical;
+        }
+
+        textarea:focus,
+        input:focus {
+            outline: none;
+
+            border-color: #2563eb;
+        }
+
+        .buttons {
+            display: flex;
+
+            gap: 15px;
+
+            margin-top: 25px;
+        }
+
+        button {
+            flex: 1;
+
+            border: none;
+
+            padding: 14px;
+
+            border-radius: 10px;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .encrypt {
+            background: #2563eb;
+        }
+
+        .decrypt {
+            background: #16a34a;
+        }
+
+        .result {
+            margin-top: 30px;
+
+            padding: 20px;
+
+            background: #f8fafc;
+
+            border-radius: 12px;
+        }
+
+        .result textarea {
+            background: white;
+        }
+
+        .footer {
+            text-align: center;
+
+            margin-top: 25px;
+
+            color: #94a3b8;
+
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+
+            <h1>🔐 AES-256 Encryption</h1>
+
+            <p>
+                Chương trình mã hóa và giải mã AES bằng Python
+            </p>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="plaintext">
+                Nội dung
+            </label>
+
+            <textarea
+                id="plaintext"
+                placeholder="Nhập nội dung cần mã hóa hoặc giải mã...">
+            </textarea>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="key">
+                Khóa AES-256
+            </label>
+
+            <input
+                type="text"
+                id="key"
+                value="0123456789ABCDEF0123456789ABCDEF">
+
+        </div>
+
+
+        <div class="buttons">
+
+            <button class="encrypt">
+                🔒 MÃ HÓA
+            </button>
+
+            <button class="decrypt">
+                🔓 GIẢI MÃ
+            </button>
+
+        </div>
+
+
+        <div class="result">
+
+            <h2>Kết quả</h2>
+
+            <textarea
+                id="result"
+                readonly
+                placeholder="Kết quả sẽ hiển thị ở đây...">
+            </textarea>
+
+        </div>
+
+
+        <div class="footer">
+
+            AES-256 • Python • Flask • PyCryptodome
+
+        </div>
+
+    </div>
+
+</body>
+</html>
